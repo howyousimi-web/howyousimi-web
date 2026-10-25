@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="140" viewBox="0 0 800 140">
+  <style>
+    .b { fill: #bfe0f5; fill-opacity: .55; stroke: #7bafd4; stroke-opacity: .7; stroke-width: 1.5;
+         animation: rise var(--d) ease-in infinite; animation-delay: var(--w); }
+    .s { fill: #fff; fill-opacity: .8; animation: rise var(--d) ease-in infinite; animation-delay: var(--w); }
+    @keyframes rise {
+      0%   { transform: translateY(0) translateX(0); opacity: 0; }
+      15%  { opacity: 1; }
+      50%  { transform: translateY(-70px) translateX(8px); }
+      100% { transform: translateY(-150px) translateX(-6px); opacity: 0; }
+    }
+  </style>
+
+  <circle class="b" cx="60"  cy="150" r="10" style="--d:5s;--w:0s"/>
+  <circle class="b" cx="140" cy="150" r="16" style="--d:7s;--w:1s"/>
+  <circle class="b" cx="230" cy="150" r="8"  style="--d:4s;--w:2.5s"/>
+  <circle class="b" cx="320" cy="150" r="14" style="--d:6s;--w:.5s"/>
+  <circle class="b" cx="410" cy="150" r="9"  style="--d:5s;--w:3s"/>
+  <circle class="b" cx="500" cy="150" r="18" style="--d:8s;--w:1.5s"/>
+  <circle class="b" cx="590" cy="150" r="11" style="--d:5.5s;--w:2s"/>
+  <circle class="b" cx="680" cy="150" r="15" style="--d:7s;--w:0.2s"/>
+  <circle class="b" cx="750" cy="150" r="8"  style="--d:4.5s;--w:3.5s"/>
+
+  <!-- little shine dots -->
+  <circle class="s" cx="136" cy="144" r="3" style="--d:7s;--w:1s"/>
+  <circle class="s" cx="495" cy="143" r="4" style="--d:8s;--w:1.5s"/>
+  <circle class="s" cx="676" cy="145" r="3" style="--d:7s;--w:0.2s"/>
+</svg>
