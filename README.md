@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=140&section=header&text=hi,%20i'm%20simi!&fontSize=40&fontColor=5b4636" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=140&section=header&text=Lemurian waves,%20I'm%20Simi&fontSize=40&fontColor=5b4636" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=7BAFD4&center=true&width=435&lines=CS+%2B+AI+student+%F0%9F%93%9A;making+games+%26+cute+things+%F0%9F%8E%AE;always+learning+everything+%E2%9C%A8)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=7BAFD4&center=true&width=435&lines=CS+%2B+AI+student+%F0%9F%93%9A;I+want+Calamansi+Cheesecake;always+learning+everything+%E2%9C%A8)](https://git.io/typing-svg)
 
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Dart](https://img.shields.io/badge/-Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
