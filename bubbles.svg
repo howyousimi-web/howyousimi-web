@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="140" viewBox="0 0 800 140">
   <style>
+    /* bubbles */
     .b { fill-opacity: .55; stroke-opacity: .75; stroke-width: 1.5;
          animation: rise var(--d) ease-in infinite; animation-delay: var(--w); }
     .pink   { fill: #f9c6e0; stroke: #e87bb8; }
@@ -11,8 +12,60 @@
       50%  { transform: translateY(-70px) translateX(8px); }
       100% { transform: translateY(-150px) translateX(-6px); opacity: 0; }
     }
+
+    /* koi */
+    .swimR { animation: swimR var(--d) linear infinite; animation-delay: var(--w); }
+    .swimL { animation: swimL var(--d) linear infinite; animation-delay: var(--w); }
+    @keyframes swimR { from { transform: translateX(-40px); } to { transform: translateX(840px); } }
+    @keyframes swimL { from { transform: translateX(840px); } to { transform: translateX(-40px); } }
+
+    .bob { animation: bob var(--bob) ease-in-out infinite; }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-5px); }
+    }
+
+    .tail { transform-box: fill-box; transform-origin: 100% 50%;
+            animation: wag .8s ease-in-out infinite alternate; }
+    @keyframes wag { from { transform: rotate(-14deg); } to { transform: rotate(14deg); } }
   </style>
 
+  <defs>
+    <!-- one tiny koi, facing right, colors set per fish -->
+    <g id="koi">
+      <path class="tail" d="M-9 0 C-14 -6 -20 -7 -23 -5 C-20 -2 -20 2 -23 5 C-20 7 -14 6 -9 0 Z"
+            fill="var(--fin)" fill-opacity=".9"/>
+      <path d="M12 0 C8 -6 -2 -7 -9 -1 C-10 0 -10 0 -9 1 C-2 7 8 6 12 0 Z"
+            fill="var(--body)" stroke="var(--fin)" stroke-width=".6"/>
+      <ellipse cx="0" cy="-2" rx="3.5" ry="2" fill="var(--spot)" fill-opacity=".9"/>
+      <ellipse cx="-5" cy="1.2" rx="2" ry="1.5" fill="var(--spot)" fill-opacity=".9"/>
+      <path d="M4 3 C2 7 -1 8 -3 7 C-1 5 1 4 4 3 Z" fill="var(--fin)" fill-opacity=".9"/>
+      <circle cx="8" cy="-1.5" r="1" fill="var(--eye)"/>
+    </g>
+  </defs>
+
+  <!-- koi (behind the bubbles) -->
+  <g transform="translate(0,30)"><g class="swimR" style="--d:26s;--w:-4s"><g class="bob" style="--bob:3.2s">
+    <use href="#koi" transform="scale(.9)" style="--body:#1c1c1c;--spot:#ff8a1f;--fin:#ff9a3c;--eye:#fff"/>
+  </g></g></g>
+
+  <g transform="translate(0,62)"><g class="swimL" style="--d:32s;--w:-14s"><g class="bob" style="--bob:4s">
+    <use href="#koi" transform="scale(-1,1)" style="--body:#ff8a1f;--spot:#1c1c1c;--fin:#2a2a2a;--eye:#1c1c1c"/>
+  </g></g></g>
+
+  <g transform="translate(0,92)"><g class="swimR" style="--d:22s;--w:-10s"><g class="bob" style="--bob:2.8s">
+    <use href="#koi" transform="scale(.75)" style="--body:#2b2b2b;--spot:#ff7a00;--fin:#ff7a00;--eye:#fff"/>
+  </g></g></g>
+
+  <g transform="translate(0,16)"><g class="swimL" style="--d:28s;--w:-20s"><g class="bob" style="--bob:3.6s">
+    <use href="#koi" transform="scale(-.7,.7)" style="--body:#ff9a2e;--spot:#1c1c1c;--fin:#ff7a00;--eye:#1c1c1c"/>
+  </g></g></g>
+
+  <g transform="translate(0,114)"><g class="swimR" style="--d:35s;--w:-25s"><g class="bob" style="--bob:4.4s">
+    <use href="#koi" transform="scale(.85)" style="--body:#1c1c1c;--spot:#ffb347;--fin:#ff8a1f;--eye:#fff"/>
+  </g></g></g>
+
+  <!-- bubbles -->
   <circle class="b pink"   cx="60"  cy="150" r="10" style="--d:5s;--w:0s"/>
   <circle class="b purple" cx="140" cy="150" r="16" style="--d:7s;--w:1s"/>
   <circle class="b pink"   cx="230" cy="150" r="8"  style="--d:4s;--w:2.5s"/>
